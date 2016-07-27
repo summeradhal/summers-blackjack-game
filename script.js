@@ -97,7 +97,7 @@ checkWin();
 $('.bet').click(function(){
 betAmount=Number($(this).attr("value"));
 $('.bet-total-number').html(betAmount);
-console.log(betAmount);
+
 }); // End of doc thing
 
 
@@ -147,7 +147,7 @@ function checkWin(){
 		$('.message').html('<button class="reset-button">Reset Game</button>');
 	$('.reset-button').click(function(){
 		reset();
-
+}
 		});
 
 		
@@ -268,8 +268,6 @@ betAmount=0;
 
 $('.bet-total-number').html(betAmount);
 }; //end of bet
-
-
 
 
 // cardValue=Number(cardValue);
