@@ -1,0 +1,225 @@
+
+
+.container{
+margin-top:10%;
+
+
+}
+
+
+.the-table{
+
+	background-image:url("beachSand.png");
+	border:5px solid #663300;
+	margin-top:30px;
+	padding:30px 0px;
+	border-radius:10px;
+	z-index:-1;
+}
+
+.card{
+	height:120px;
+	background-color:#fff;
+	color:black;
+	margin:10px;
+	width:13%;
+	border-radius:5px;
+	box-shadow: 10px 10px 5px #000;
+	background-image:url("beachCardBack.png");
+
+	background-repeat:no-repeat;
+	background-size:auto 120px;
+
+}
+
+
+.dealer-hand-wrapper, .player-hand-wrapper{
+
+	color:white;
+	font-size:18px;
+	text-align:center;
+
+}
+
+.dealer-total-number,.player-total-number{
+	display:block;
+	text-align:center;
+}
+
+.player-actions{
+	text-align:center;
+
+
+}
+.player-actions button{
+	width:10%;
+	border-radius:3px;
+	color:white;
+	background-color:black;
+	display:inline-block;
+
+
+
+}
+
+.wholeDeck {
+	width:90%;
+	margin-left:600px;
+	padding-bottom:10px;
+	
+	
+
+}
+
+.wholeDeck .card{
+background-image:url("beachCardBack.png");
+
+	background-repeat:no-repeat;
+	background-size:auto 120px;
+
+
+}
+
+.card{
+padding:0px;
+}
+img{
+	max-width:110%;
+	
+	max-height:110%;
+}
+
+.message{
+	text-align: center;
+	font-size: 24px;
+	color: white;
+	background-color: blue;
+	margin-top: 10px;
+}
+
+
+.player-chips{
+text-align:center;
+
+
+
+}
+
+/* 
+.chip1{
+			
+			height:80px;
+			width:80px;
+			background-color:black;
+			border-radius:40px;
+			
+		} 
+
+
+
+
+
+.chip2{
+			
+			height:80px;
+			width:80px;
+			background-color:black;
+			border-radius:40px;
+			
+		} 
+
+
+
+.chip3{
+			
+			height:80px;
+			width:80px;
+			background-color:black;
+			border-radius:40px;
+			
+		} 
+
+
+
+.chip4{
+			
+			height:80px;
+			width:80px;
+			background-color:black;
+			border-radius:40px;
+			
+		} 
+
+
+
+.chip5{
+			
+			height:80px;
+			width:80px;
+			background-color:black;
+			border-radius:40px;
+			
+		} 
+		 */
+/* ----------------------------------------------------------- */
+/* /* 
+.opphead div{
+	position:absolute;
+}
+
+.face {
+			
+			top:40px;
+			left:20px;
+			height:400px;
+			width:400px;
+			background-color:#AA8354;
+			/* to make this a circle(instead of a square) we can use border-radius! */
+			/* border-radius:200px;
+			z-index:-1;
+		} */
+
+/* .smile {
+	width: 20px;
+	height: 20px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid black;
+	
+
+} */
+
+
+/* 
+.eye1{
+			top:110px;
+			left:40px;
+			height:40px;
+			width:40px;
+			background-color:black;
+			to make this a circle(instead of a square) we can use border-radius!
+			border-radius:20px;
+			
+		} */
+/* 
+.eye2{
+			top:110px;
+			left:140px;
+			height:40px;
+			width:40px;
+			background-color:black;
+			to make this a circle(instead of a square) we can use border-radius!
+			border-radius:50px;
+			
+		}
+.torso{
+
+}
+ */
+
+
+
+
+
+
+ 
