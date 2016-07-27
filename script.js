@@ -47,26 +47,22 @@ $('.deal-button').click(function(){
 	});
 
 $('.hit-button').click(function(){
-var playerTotal=calculateTotal(playersHand,'player');
-	if(playerTotal<=21){
-	placeCard('player','three',theDeck[4]);
-	var slotForNewCard='';
-	if(playersHand.length==2){slotForNewCard="three";}
-	else if(playersHand.length==3){slotForNewCard="four";}
-	else if(playersHand.length==4){slotForNewCard="five";}
-	else if(playersHand.length==5){slotForNewCard="six";}
-		placeCard('player',slotForNewCard,theDeck[topOfTheDeck]);
-		playersHand.push(theDeck[topOfTheDeck]);
-		calculateTotal(playersHand,'player');
-		topOfTheDeck++;
+		var playerTotal = calculateTotal(playersHand, 'player');
+		if(playerTotal <= 21){
+			
+			var slotForNewCard = '';
+			if(playersHand.length == 2){slotForNewCard = "three";}
+			else if(playersHand.length == 3){slotForNewCard = "four";}
+			else if(playersHand.length == 4){slotForNewCard = "five";}
+			else if(playersHand.length == 5){slotForNewCard = "six";}
 
-		setTimeout(function(){ 
-			placeCard('player', slotForNewCard, theDeck[topOfTheDeck]);
-			playersHand.push(theDeck[topOfTheDeck]);
-			calculateTotal(playersHand, 'player');
-			topOfTheDeck++;
-		}, 500);
-	}
+			setTimeout(function(){ 
+				placeCard('player', slotForNewCard, theDeck[topOfTheDeck]);
+				playersHand.push(theDeck[topOfTheDeck]);
+				calculateTotal(playersHand, 'player');
+				topOfTheDeck++;
+			}, 500);		
+		}
 	});
 $('.stand-button').click(function(){
 			var slotForNewCard=''
@@ -105,12 +101,6 @@ $('.bet-total-number').html(betAmount);
 
 
 
-
-
-
-
-
-
 function checkWin(){
 	alert("Game Over");
 	// get player total
@@ -134,6 +124,9 @@ function checkWin(){
 			}else if(dealerTotal>playerTotal){
 					
 				bet('lose');
+			}else if((playerTotal==21)&&(playersHand.length==2)){
+				bet('twoCardWin');
+
 			}else if(playerTotal==21){
 						
 						bet('blackjack');
@@ -145,9 +138,8 @@ function checkWin(){
 			
 		}
 		$('.message').html('<button class="reset-button">Reset Game</button>');
-	$('.reset-button').click(function(){
+		$('.reset-button').click(function(){
 		reset();
-}
 		});
 
 		
@@ -156,7 +148,7 @@ function placeCard(who,where,cardToPlace){
 	
 	var classSelector='.'+who+'-cards .card-'+where;
 	$(classSelector).html('<img src="'+cardToPlace+'.png">');
-	
+
 // for(var j=0;j<pic.length;j++)
 // 	for(var i=0;i<13;i++){
 		
@@ -257,6 +249,9 @@ bank-=betAmount;
  var newBet=(betAmount*1.5);
  bank+=newBet;
 
+}else if(outcome=='twoCardWin'){
+	var newBet=(betAmount*2);
+	bank+=newBet;
 }else{
 
 		bank=bank;
